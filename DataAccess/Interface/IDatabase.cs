@@ -10,7 +10,7 @@ namespace AppCore.DataAccess.Interface
     {
         T Insert(T obj);
         T Update(T obj);
-        T Delete(int codigo);
+        bool Delete(int codigo);
         T Get(int codigo);
         List<T> List();
     }

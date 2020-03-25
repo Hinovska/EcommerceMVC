@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "82584708-19be-45dc-b712-f43d1b0e72f4",
+		"name": "ElEmpleo.com",
+		"description": "Solcicitudes APIRest para Prueba Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ciudad",
+			"item": [
+				{
+					"name": "Ciudad Get List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8086/api/ciudad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"ciudad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ciudad Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8086/api/ciudad/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"ciudad",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ciudad Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Villavicencio\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/ciudad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"ciudad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ciudad Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Cabo de la Vela\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/ciudad/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"ciudad",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ciudad Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8086/api/ciudad/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"ciudad",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Vendedor",
+			"item": [
+				{
+					"name": "Vendedor Get List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8086/api/vendedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"vendedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vendedor Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8086/api/vendedor/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"vendedor",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vendedor Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"nombres\": \"andres\",\r\n        \"apellidos\": \"gomez\",\r\n        \"numero_identificacion\": 6666666666,\r\n        \"codigo_ciudad\": 1\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/vendedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"vendedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vendedor Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres\": \"camilo\",\r\n    \"apellidos\": \"Jimenez\",\r\n    \"numero_identificacion\": 3423545678,\r\n    \"codigo_ciudad\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/vendedor/50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"vendedor",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vendedor Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8086/api/vendedor/50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"vendedor",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

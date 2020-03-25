@@ -12,7 +12,7 @@ GO
 	BEGIN
 		-- SET NOCOUNT ON added to prevent extra result sets from
 		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+		-- SET NOCOUNT ON;
 
 		-- Insert statements for procedure here
 		INSERT INTO CIUDAD (DESCRIPCION) VALUES (@DESCRIPCION);
@@ -48,7 +48,7 @@ GO
 	BEGIN
 		-- SET NOCOUNT ON added to prevent extra result sets from
 		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+		-- SET NOCOUNT ON;
 
 		-- Insert statements for procedure here
 		UPDATE CIUDAD SET DESCRIPCION = @DESCRIPCION WHERE CODIGO = @CODIGO;
@@ -65,7 +65,7 @@ GO
 	BEGIN
 		-- SET NOCOUNT ON added to prevent extra result sets from
 		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+		-- SET NOCOUNT ON;
 
 		-- Insert statements for procedure here
 		DELETE CIUDAD WHERE CODIGO = @CODIGO;

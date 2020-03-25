@@ -7,48 +7,43 @@ namespace AppCore.BusinessRules.Ecommerce
 {
     public class Vendedor
     {
-        public int Insert(sfEntities.Vendedor objVendedor)
+
+        private VendedorFactory factory;
+        private IDatabase<sfEntities.Vendedor> vendedor;
+
+        public Vendedor()
         {
-            sfEntities.Vendedor result;
-            VendedorFactory factory = new ConcreteVendedorFactory();
-            IDatabase<sfEntities.Vendedor> vendedor = factory.GetInstance();
-            result = vendedor.Insert(objVendedor);
-            return result.codigo;
+            this.factory = new AgentVendedorFactory();
+            this.vendedor = factory.GetInstance();
         }
 
-        public bool Update(sfEntities.Vendedor objVendedor)
+        public sfEntities.Vendedor Insert(sfEntities.Vendedor objVendedor)
         {
-            bool result = false;
-            VendedorFactory factory = new ConcreteVendedorFactory();
-            IDatabase<sfEntities.Vendedor> vendedor = factory.GetInstance();
-            vendedor.Update(objVendedor);
+            sfEntities.Vendedor result = vendedor.Insert(objVendedor);
             return result;
         }
 
-        public int Delete(int codigo)
+        public sfEntities.Vendedor Update(sfEntities.Vendedor objVendedor)
         {
-            sfEntities.Vendedor result;
-            VendedorFactory factory = new ConcreteVendedorFactory();
-            IDatabase<sfEntities.Vendedor> vendedor = factory.GetInstance();
-            result = vendedor.Delete(codigo);
-            return result.codigo;
+            sfEntities.Vendedor result = vendedor.Update(objVendedor);
+            return result;
+        }
+
+        public bool Delete(int codigo)
+        {
+            bool result = vendedor.Delete(codigo);
+            return result;
         }
 
         public sfEntities.Vendedor Get(int codigo)
         {
-            sfEntities.Vendedor result;
-            VendedorFactory factory = new ConcreteVendedorFactory();
-            IDatabase<sfEntities.Vendedor> vendedor = factory.GetInstance();
-            result = vendedor.Get(codigo);
+            sfEntities.Vendedor result = vendedor.Get(codigo);
             return result;
         }
 
         public List<sfEntities.Vendedor> List()
         {
-            List<sfEntities.Vendedor> result;
-            VendedorFactory factory = new ConcreteVendedorFactory();
-            IDatabase<sfEntities.Vendedor> vendedor = factory.GetInstance();
-            result = vendedor.List();
+            List<sfEntities.Vendedor> result = vendedor.List();
             return result;
         }
     }

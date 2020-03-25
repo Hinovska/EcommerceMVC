@@ -11,3 +11,16 @@ E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyRefer
 E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
 E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\AppCore.BusinessRules.dll
 E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\AppCore.BusinessRules.pdb
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.BusinessRules.dll
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.BusinessRules.pdb
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.DataAccess.dll
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.SystemFramework.dll
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\EntityFramework.dll
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.DataAccess.pdb
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.DataAccess.dll.config
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\AppCore.SystemFramework.pdb
+E:\GitHub\EcommerceMVC\BusinessRules\bin\Debug\EntityFramework.xml
+E:\GitHub\EcommerceMVC\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+E:\GitHub\EcommerceMVC\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
+E:\GitHub\EcommerceMVC\BusinessRules\obj\Debug\AppCore.BusinessRules.dll
+E:\GitHub\EcommerceMVC\BusinessRules\obj\Debug\AppCore.BusinessRules.pdb

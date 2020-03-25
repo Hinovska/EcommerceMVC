@@ -15,13 +15,13 @@ GO
 	BEGIN
 		-- SET NOCOUNT ON added to prevent extra result sets from
 		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+		-- SET NOCOUNT ON;
 
 		-- Insert statements for procedure here
 		IF EXISTS(SELECT TOP 1 CODIGO FROM CIUDAD WHERE CODIGO = @CODIGO_CIUDAD)
 		BEGIN
 			INSERT INTO VENDEDOR (NOMBRE, APELLIDO, NUMERO_IDENTIFICACION, CODIGO_CIUDAD) 
-			VALUES (@NOMBRE, @APELLIDO, @NUMERO_IDENTIFICACION, @CODIGO_CIUDAD);
+			VALUES (UPPER(@NOMBRE), UPPER(@APELLIDO), @NUMERO_IDENTIFICACION, @CODIGO_CIUDAD);
 			SELECT @CODIGO = @@IDENTITY;
 		END
 	END
@@ -58,12 +58,12 @@ GO
 	BEGIN
 		-- SET NOCOUNT ON added to prevent extra result sets from
 		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+		-- SET NOCOUNT ON;
 
 		-- Insert statements for procedure here
 		UPDATE VENDEDOR 
-		SET NOMBRE = @NOMBRE,
-		APELLIDO = @APELLIDO,
+		SET NOMBRE = UPPER(@NOMBRE),
+		APELLIDO = UPPER(@APELLIDO),
 		NUMERO_IDENTIFICACION = @NUMERO_IDENTIFICACION,
 		CODIGO_CIUDAD = @CODIGO_CIUDAD
 		WHERE CODIGO = @CODIGO;
@@ -80,7 +80,7 @@ GO
 	BEGIN
 		-- SET NOCOUNT ON added to prevent extra result sets from
 		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+		-- SET NOCOUNT ON;
 
 		-- Insert statements for procedure here
 		DELETE VENDEDOR WHERE CODIGO = @CODIGO;

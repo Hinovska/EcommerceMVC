@@ -83,10 +83,10 @@
     <Compile Include="DBModel\VENDEDOR.cs">
       <DependentUpon>EcommerceModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Factory\ConcreteVendedorFactory.cs" />
+    <Compile Include="Factory\AgentVendedorFactory.cs" />
     <Compile Include="Factory\VendedorFactory.cs" />
     <Compile Include="Factory\CiudadFactory.cs" />
-    <Compile Include="Factory\ConcreteCiudadFactory.cs" />
+    <Compile Include="Factory\AgentCiudadFactory.cs" />
     <Compile Include="Interface\IDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

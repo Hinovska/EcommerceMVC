@@ -9,3 +9,14 @@ E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\EntityFramework.dll
 E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\AppCore.SystemFramework.pdb
 E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\EntityFramework.xml
 E:\GitHub\ElEmpleo.com\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\AppCore.DataAccess.dll.config
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\AppCore.DataAccess.dll
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\AppCore.DataAccess.pdb
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\AppCore.SystemFramework.dll
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\EntityFramework.dll
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\AppCore.SystemFramework.pdb
+E:\GitHub\EcommerceMVC\DataAccess\bin\Debug\EntityFramework.xml
+E:\GitHub\EcommerceMVC\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\GitHub\EcommerceMVC\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+E:\GitHub\EcommerceMVC\DataAccess\obj\Debug\AppCore.DataAccess.dll
+E:\GitHub\EcommerceMVC\DataAccess\obj\Debug\AppCore.DataAccess.pdb

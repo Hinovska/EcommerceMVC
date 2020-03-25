@@ -9,11 +9,11 @@ using sfEntities = AppCore.SystemFramework.Entities;
 
 namespace AppCore.DataAccess.Factory
 {
-    public class ConcreteVendedorFactory : VendedorFactory
+    public class AgentCiudadFactory : CiudadFactory
     {
-        public override IDatabase<sfEntities.Vendedor> GetInstance()
+        public override IDatabase<sfEntities.Ciudad> GetInstance()
         {
-            return new DataAccess.DataEntities.Vendedor();
+            return new DataAccess.DataEntities.Ciudad();
         }
 
     }

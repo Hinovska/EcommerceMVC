@@ -7,48 +7,42 @@ namespace AppCore.BusinessRules.Ecommerce
 {
     public class Ciudad
     {
-        public int Insert(sfEntities.Ciudad objCiudad)
+        private CiudadFactory factory;
+        private IDatabase<sfEntities.Ciudad> city;
+
+        public Ciudad()
         {
-            sfEntities.Ciudad result;
-            CiudadFactory factory = new ConcreteCiudadFactory();
-            IDatabase<sfEntities.Ciudad> city = factory.GetInstance();
-            result = city.Insert(objCiudad);
-            return result.codigo;
+            this.factory = new AgentCiudadFactory();
+            this.city = factory.GetInstance();
         }
 
-        public bool Update(sfEntities.Ciudad objCiudad)
+        public sfEntities.Ciudad Insert(sfEntities.Ciudad objCiudad)
         {
-            bool result = false;
-            CiudadFactory factory = new ConcreteCiudadFactory();
-            IDatabase<sfEntities.Ciudad> city = factory.GetInstance();
-            city.Update(objCiudad);
+            sfEntities.Ciudad result = city.Insert(objCiudad);
             return result;
         }
 
-        public int Delete(int codigo)
+        public sfEntities.Ciudad Update(sfEntities.Ciudad objCiudad)
         {
-            sfEntities.Ciudad result;
-            CiudadFactory factory = new ConcreteCiudadFactory();
-            IDatabase<sfEntities.Ciudad> city = factory.GetInstance();
-            result = city.Delete(codigo);
-            return result.codigo;
+            sfEntities.Ciudad result = city.Update(objCiudad);
+            return result;
+        }
+
+        public bool Delete(int codigo)
+        {
+            bool result = city.Delete(codigo);
+            return result;
         }
 
         public sfEntities.Ciudad Get(int codigo)
         {
-            sfEntities.Ciudad result;
-            CiudadFactory factory = new ConcreteCiudadFactory();
-            IDatabase<sfEntities.Ciudad> city = factory.GetInstance();
-            result = city.Get(codigo);
+            sfEntities.Ciudad result = city.Get(codigo);
             return result;
         }
 
         public List<sfEntities.Ciudad> List()
         {
-            List<sfEntities.Ciudad> result;
-            CiudadFactory factory = new ConcreteCiudadFactory();
-            IDatabase<sfEntities.Ciudad> city = factory.GetInstance();
-            result = city.List();
+            List<sfEntities.Ciudad> result = city.List();
             return result;
         }
     }
