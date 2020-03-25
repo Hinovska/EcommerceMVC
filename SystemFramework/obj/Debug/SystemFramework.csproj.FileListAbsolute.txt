@@ -1,0 +1,5 @@
+E:\GitHub\ElEmpleo.com\SystemFramework\bin\Debug\AppCore.SystemFramework.dll
+E:\GitHub\ElEmpleo.com\SystemFramework\bin\Debug\AppCore.SystemFramework.pdb
+E:\GitHub\ElEmpleo.com\SystemFramework\obj\Debug\SystemFramework.csprojAssemblyReference.cache
+E:\GitHub\ElEmpleo.com\SystemFramework\obj\Debug\AppCore.SystemFramework.dll
+E:\GitHub\ElEmpleo.com\SystemFramework\obj\Debug\AppCore.SystemFramework.pdb

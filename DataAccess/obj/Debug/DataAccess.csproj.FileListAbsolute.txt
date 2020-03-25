@@ -1,0 +1,11 @@
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\AppCore.DataAccess.dll
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\AppCore.DataAccess.pdb
+E:\GitHub\ElEmpleo.com\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\GitHub\ElEmpleo.com\DataAccess\obj\Debug\AppCore.DataAccess.dll
+E:\GitHub\ElEmpleo.com\DataAccess\obj\Debug\AppCore.DataAccess.pdb
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\AppCore.DataAccess.dll.config
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\AppCore.SystemFramework.dll
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\EntityFramework.dll
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\AppCore.SystemFramework.pdb
+E:\GitHub\ElEmpleo.com\DataAccess\bin\Debug\EntityFramework.xml
+E:\GitHub\ElEmpleo.com\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete

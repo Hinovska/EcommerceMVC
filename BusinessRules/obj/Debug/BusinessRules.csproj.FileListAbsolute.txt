@@ -1,0 +1,13 @@
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.BusinessRules.dll
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.BusinessRules.pdb
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.DataAccess.dll
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.SystemFramework.dll
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\EntityFramework.dll
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.DataAccess.pdb
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.DataAccess.dll.config
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\AppCore.SystemFramework.pdb
+E:\GitHub\ElEmpleo.com\BusinessRules\bin\Debug\EntityFramework.xml
+E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
+E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\AppCore.BusinessRules.dll
+E:\GitHub\ElEmpleo.com\BusinessRules\obj\Debug\AppCore.BusinessRules.pdb

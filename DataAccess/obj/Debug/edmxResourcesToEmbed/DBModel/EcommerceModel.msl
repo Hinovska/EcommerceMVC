@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerceModelStoreContainer" CdmEntityContainer="EcommerceEntities">
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="EcommerceModel.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDEDOR">
+      <EntityTypeMapping TypeName="EcommerceModel.VENDEDOR">
+        <MappingFragment StoreEntitySet="VENDEDOR">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
+          <ScalarProperty Name="CODIGO_CIUDAD" ColumnName="CODIGO_CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="del_CIUDAD" FunctionName="EcommerceModel.Store.del_CIUDAD" />
+    <FunctionImportMapping FunctionImportName="del_VENDEDOR" FunctionName="EcommerceModel.Store.del_VENDEDOR" />
+    <FunctionImportMapping FunctionImportName="get_CIUDAD" FunctionName="EcommerceModel.Store.get_CIUDAD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EcommerceModel.get_CIUDAD_Result">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="get_VENDEDOR" FunctionName="EcommerceModel.Store.get_VENDEDOR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EcommerceModel.get_VENDEDOR_Result">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
+          <ScalarProperty Name="CODIGO_CIUDAD" ColumnName="CODIGO_CIUDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ins_CIUDAD" FunctionName="EcommerceModel.Store.ins_CIUDAD" />
+    <FunctionImportMapping FunctionImportName="ins_VENDEDOR" FunctionName="EcommerceModel.Store.ins_VENDEDOR" />
+    <FunctionImportMapping FunctionImportName="lst_CIUDAD" FunctionName="EcommerceModel.Store.lst_CIUDAD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EcommerceModel.lst_CIUDAD_Result">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="lst_VENDEDOR" FunctionName="EcommerceModel.Store.lst_VENDEDOR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EcommerceModel.lst_VENDEDOR_Result">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
+          <ScalarProperty Name="CODIGO_CIUDAD" ColumnName="CODIGO_CIUDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="upd_CIUDAD" FunctionName="EcommerceModel.Store.upd_CIUDAD" />
+    <FunctionImportMapping FunctionImportName="upd_VENDEDOR" FunctionName="EcommerceModel.Store.upd_VENDEDOR" />
+  </EntityContainerMapping>
+</Mapping>

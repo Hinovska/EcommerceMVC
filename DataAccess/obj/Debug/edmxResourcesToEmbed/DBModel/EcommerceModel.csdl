@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CIUDAD">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="VENDEDOR" Relationship="Self.FK__VENDEDOR__CODIGO__267ABA7A" FromRole="CIUDAD" ToRole="VENDEDOR" />
+  </EntityType>
+  <EntityType Name="VENDEDOR">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NUMERO_IDENTIFICACION" Type="Int64" Nullable="false" />
+    <Property Name="CODIGO_CIUDAD" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.FK__VENDEDOR__CODIGO__267ABA7A" FromRole="VENDEDOR" ToRole="CIUDAD" />
+  </EntityType>
+  <Association Name="FK__VENDEDOR__CODIGO__267ABA7A">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
+    <End Role="VENDEDOR" Type="Self.VENDEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="VENDEDOR">
+        <PropertyRef Name="CODIGO_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcommerceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+    <EntitySet Name="VENDEDOR" EntityType="Self.VENDEDOR" />
+    <AssociationSet Name="FK__VENDEDOR__CODIGO__267ABA7A" Association="Self.FK__VENDEDOR__CODIGO__267ABA7A">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="VENDEDOR" EntitySet="VENDEDOR" />
+    </AssociationSet>
+    <FunctionImport Name="del_CIUDAD">
+      <Parameter Name="CODIGO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="del_VENDEDOR">
+      <Parameter Name="CODIGO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="get_CIUDAD" ReturnType="Collection(EcommerceModel.get_CIUDAD_Result)">
+      <Parameter Name="CODIGO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="get_VENDEDOR" ReturnType="Collection(EcommerceModel.get_VENDEDOR_Result)">
+      <Parameter Name="CODIGO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ins_CIUDAD">
+      <Parameter Name="CODIGO" Mode="InOut" Type="Int32" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ins_VENDEDOR">
+      <Parameter Name="CODIGO" Mode="InOut" Type="Int32" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="APELLIDO" Mode="In" Type="String" />
+      <Parameter Name="NUMERO_IDENTIFICACION" Mode="In" Type="Int64" />
+      <Parameter Name="CODIGO_CIUDAD" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="lst_CIUDAD" ReturnType="Collection(EcommerceModel.lst_CIUDAD_Result)" />
+    <FunctionImport Name="lst_VENDEDOR" ReturnType="Collection(EcommerceModel.lst_VENDEDOR_Result)" />
+    <FunctionImport Name="upd_CIUDAD">
+      <Parameter Name="CODIGO" Mode="In" Type="Int32" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="upd_VENDEDOR">
+      <Parameter Name="CODIGO" Mode="In" Type="Int32" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="APELLIDO" Mode="In" Type="String" />
+      <Parameter Name="NUMERO_IDENTIFICACION" Mode="In" Type="Int64" />
+      <Parameter Name="CODIGO_CIUDAD" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="get_CIUDAD_Result">
+    <Property Type="Int32" Name="CODIGO" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="get_VENDEDOR_Result">
+    <Property Type="Int32" Name="CODIGO" Nullable="false" />
+    <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="APELLIDO" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="NUMERO_IDENTIFICACION" Nullable="false" />
+    <Property Type="Int32" Name="CODIGO_CIUDAD" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="lst_CIUDAD_Result">
+    <Property Type="Int32" Name="CODIGO" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="lst_VENDEDOR_Result">
+    <Property Type="Int32" Name="CODIGO" Nullable="false" />
+    <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="APELLIDO" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="NUMERO_IDENTIFICACION" Nullable="false" />
+    <Property Type="Int32" Name="CODIGO_CIUDAD" Nullable="false" />
+  </ComplexType>
+</Schema>
