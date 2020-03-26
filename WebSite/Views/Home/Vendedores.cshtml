@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Vendedores";
+}
+
+<div class="row">
+    <div id="VendedorContent" class="container" data-bind="css: { enabled: EnableSystem()}">
+        <div class="container">
+            <h2>@ViewBag.Title.</h2>
+            <h3>@ViewBag.Message</h3>
+        </div>
+        <div id="ciudadesHeader" data-bind="visible:ListVendedor().length > 0" class="container">
+            <div class="row panel-body table-bordered">
+                <div class="col-sm-12 panel-info">
+                    <label class="label label-primary tittle">Vendedor</label>
+                </div>
+                <div class="col-sm-3 panel-info">
+                    <input id="txtAddNombres" type="text" value="" maxlength="20" class="input-sm" data-bind="textInput: VendedorToAdd().nombre" placeholder="NOMBRE" />
+                </div>
+                <div class="col-sm-3 panel-info">
+                    <input id="txtAddApellidos" type="text" value="" maxlength="20" class="input-sm" data-bind="textInput: VendedorToAdd().apellido" placeholder="APELLIDO" />
+                </div>
+                <div class="col-sm-3 panel-info">
+                    <input id="txtAddNumIdentificacion" type="number" value="" maxlength="20" class="input-sm" data-bind="textInput: VendedorToAdd().numero_identificacion" placeholder="NUMERO IDENTIFICACION" />
+                </div>
+                <div class="col-sm-3 panel-info">
+                    <input id="txtAddCodigoCiudad" type="hidden" maxlength="2" class="input-sm" data-bind="textInput: VendedorToAdd().codigo_ciudad" />
+                    <select id="optCiudades" class="dropup input-sm" data-bind="foreach: ListCiudad(), visible: ListCiudad().length > 0 , selectedOptions: VendedorToAdd().codigo_ciudad">
+                        <option class="nav-divider" data-bind="attr: {id: ('optciudad' + codigo) }, text: descripcion, value: codigo"></option>
+                    </select>
+                </div>
+                <div class="col-sm-12 panel-info">
+                    <span class="btn-xs glyphicon glyphicon-plus btncustom add" title="Agregar" data-bind="event: { click: ApiRest.Create }"></span>
+                </div>
+            </div>
+        </div>
+        <div id="ciudadesGrid" data-bind="visible:ListVendedor().length > 0" class="container">
+            <div class="row panel-body table-bordered bg-success">
+                <div class="col-sm-1 panel-info">CODIGO</div>
+                <div class="col-sm-2 panel-info">NOMBRE</div>
+                <div class="col-sm-2 panel-info">APELLIDO</div>
+                <div class="col-sm-2 panel-info">NUMERO IDENTIFICACION</div>
+                <div class="col-sm-2 panel-info">CIUDAD</div>
+                <div class="col-sm-3 panel-info text-right">
+                    <span class="btn-xs glyphicon glyphicon-search btncustom refresh" title="Actualizar" data-bind="event: { click: ApiRest.List }"></span>
+                </div>
+            </div>
+        </div>
+        <div id="ciudadesGrid" data-bind="foreach: ListVendedor(), visible:ListVendedor().length > 0" class="container">
+            <div data-bind="attr: {id: ('ciudad' + codigo) }" class="row panel-body table-bordered">
+                <div class="col-sm-1 panel-info" data-bind="text:codigo"></div>
+                <div class="col-sm-2 panel-info" data-bind="text:nombre, visible: ((EditMode()) ? false: true)"></div>
+                <div class="col-sm-2 panel-info" data-bind="text:apellido, visible: ((EditMode()) ? false: true)"></div>
+                <div class="col-sm-2 panel-info" data-bind="text:numero_identificacion, visible: ((EditMode()) ? false: true)"></div>
+                <div class="col-sm-2 panel-info" data-bind="text:name_ciudad, visible: ((EditMode()) ? false: true)"></div>
+                <div class="col-sm-2 panel-info" data-bind="visible: ((EditMode()) ? true: false)">
+                    <input type="text" value="" class="input-sm" maxlength="20" data-bind="attr: {id: ('txtEditNombre' + codigo) }, textInput: nombre" placeholder="NOMBRE" />
+                </div>
+                <div class="col-sm-2 panel-info" data-bind="visible: ((EditMode()) ? true: false)">
+                    <input type="text" value="" class="input-sm" maxlength="20" data-bind="attr: {id: ('txtEditApellido' + codigo) }, textInput: apellido" placeholder="APELLIDO" />
+                </div>
+                <div class="col-sm-2 panel-info" data-bind="visible: ((EditMode()) ? true: false)">
+                    <input type="number" value="" class="input-sm" maxlength="10" data-bind="attr: {id: ('txtEditNumIdentificacion' + codigo) }, textInput: numero_identificacion" placeholder="NUMERO IDENTIFICACION" />
+                </div>
+                <div class="col-sm-2 panel-info" data-bind="visible: ((EditMode()) ? true: false)">
+                    <input type="hidden" value="" maxlength="20" data-bind="attr: {id: ('hndEditCodigoCiudad' + codigo) }, textInput: codigo_ciudad" />
+                    <select class="dropup input-sm" data-bind="foreach: ListCiudadEdit(), visible: ListCiudadEdit().length > 0 , selectedOptions: codigo_ciudad">
+                        <option class="nav-divider" data-bind="text: descripcion, value: codigo, attr: {id : ('optionEdit' + '_'  + codigo + '_' + $parent.codigo_ciudad()), selected: (codigo == $parent.codigo_ciudad()) }"></option>
+                    </select>
+                </div>
+                <div class="col-sm-3 panel-info text-right">
+                    <span class="btn-xs glyphicon glyphicon-repeat btncustom reload" title="Cargar" data-bind="event: { click: $root.ApiRest.Get }"></span>
+                    <span class="btn-xs glyphicon glyphicon-ok btncustom save" title="Guardar" data-bind="visible: ((EditMode()) ? true: false), event: { click: $root.ApiRest.Update }"></span>
+                    <span class="btn-xs glyphicon glyphicon-pencil btncustom edit" title="Editar" data-bind="visible: ((EditMode()) ? false: true), event: { click: SetEditMode }"></span>
+                    <span class="btn-xs glyphicon glyphicon-trash btncustom del" title="Eliminar" data-bind="event: { click: $root.ApiRest.Delete }"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container panel-body mark">
+            <div class="row">
+                <span class="col-sm-4">Prueba Tecnica</span>
+                <span class="col-sm-4">Full Stack Developer .Net</span>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/knockout")
+@Scripts.Render("~/bundles/vendedor")

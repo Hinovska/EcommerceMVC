@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Ciudades";
+}
+
+<div class="row">
+    <div id="CiudadContent" class="container" data-bind="css: { enabled: EnableSystem()}">
+        <div class="container">
+            <h2>@ViewBag.Title.</h2>
+            <h3>@ViewBag.Message</h3>
+        </div>
+        <div id="ciudadesHeader" data-bind="visible:ListCiudad().length > 0" class="container">
+            <div class="row panel-body table-bordered">
+                <div class="col-sm-12 panel-info right">
+                    <label class="label label-primary tittle">Ciudad</label>
+                </div>
+                <div class="col-sm-3 panel-info">
+                    <input id="txtAddCiudad" type="text" value="" maxlength="20" class="input-sm left" data-bind="textInput: CiudadToAdd" placeholder="DESCRIPCION" />
+                </div>
+                <div class="col-sm-1 panel-info">
+                    <span class="btn-xs glyphicon glyphicon-plus btncustom add" title="Agregar" data-bind="event: { click: ApiRest.Create }"></span>
+                </div>
+            </div>
+        </div>
+        <div id="ciudadesGrid" data-bind="visible:ListCiudad().length > 0" class="container">
+            <div class="row panel-body table-bordered bg-success">
+                <div class="col-sm-2 panel-info">CODIGO</div>
+                <div class="col-sm-6 panel-info">DESCRIPCION</div>
+                <div class="col-sm-4 panel-info text-right">
+                    <span class="btn-xs glyphicon glyphicon-search btncustom refresh" title="Actualizar" data-bind="event: { click: ApiRest.List }"></span>
+                </div>
+            </div>
+        </div>
+        <div id="ciudadesGrid" data-bind="foreach: ListCiudad(), visible:ListCiudad().length > 0" class="container">
+            <div data-bind="attr: {id: ('ciudad' + codigo) }" class="row panel-body table-bordered">
+                <div class="col-sm-2 panel-info" data-bind="text:codigo"></div>
+                <div class="col-sm-6 panel-info" data-bind="text:descripcion, visible: ((EditMode()) ? false: true)"></div>
+                <div class="col-sm-6 panel-info" data-bind="visible: ((EditMode()) ? true: false)">
+                    <input id="txtEditCiudad" type="text" value="" class="input-sm" maxlength="20" data-bind="textInput: descripcion" placeholder="Ciudad" />
+                </div>
+                <div class="col-sm-4 panel-info text-right">
+                    <span class="btn-xs glyphicon glyphicon-repeat btncustom reload" title="Cargar" data-bind="event: { click: $root.ApiRest.Get }"></span>
+                    <span class="btn-xs glyphicon glyphicon-ok btncustom save" title="Guardar" data-bind="visible: ((EditMode()) ? true: false), event: { click: $root.ApiRest.Update }"></span>
+                    <span class="btn-xs glyphicon glyphicon-pencil btncustom edit" title="Editar" data-bind="visible: ((EditMode()) ? false: true), event: { click: SetEditMode }"></span>
+                    <span class="btn-xs glyphicon glyphicon-trash btncustom del" title="Eliminar" data-bind="event: { click: $root.ApiRest.Delete }"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container panel-body mark">
+            <div class="row">
+                <span class="col-sm-4">Prueba Tecnica</span>
+                <span class="col-sm-4">Full Stack Developer .Net</span>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/knockout")
+@Scripts.Render("~/bundles/ciudad")

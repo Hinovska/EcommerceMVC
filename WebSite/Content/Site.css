@@ -22,3 +22,47 @@ select,
 textarea {
     max-width: 280px;
 }
+
+label.tittle {
+    padding: 6px 5px;
+    margin-bottom: 4px;
+    position: relative;
+    display: block;
+}
+
+span.btncustom {
+    border-radius: 5px 5px;
+    border: 1px solid #808080;
+    height: 26px;
+    width: 26px;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+
+    span.btncustom.add {
+        background-color: #69c418;
+    }
+
+    span.btncustom.del {
+        background-color: #a40b0b;
+        color: #efeded;
+    }
+
+    span.btncustom.edit {
+        background-color: #163c97;
+        color: #caccca;
+    }
+
+    span.btncustom.save {
+        background-color: #69c418;
+    }
+
+    span.btncustom.refresh {
+        background-color: #e1dfdf;
+        color: #1d1b1b;
+    }
+
+    span.btncustom.reload {
+        background-color: #e1dfdf;
+        color: #1d1b1b;
+    }

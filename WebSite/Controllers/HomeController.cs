@@ -13,16 +13,16 @@ namespace AppCore.WebSite.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Ciudades()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Listado de Ciudades";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Vendedores()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Listado de Vendedores.";
 
             return View();
         }
