@@ -23,3 +23,5 @@ Proyecto realizado para prueba técnica.
 4. Modificar connectionString "EcommerceEntities" en web.config apuntando a servidor SQL Server.
 5. Seleccionar como Proyecto de arranque el proyecto “WebSite.”
 6. Inicializar proyecto en Visual Studio.
+
+Nota: Es posible realizar pruebas de consumo al APIRest directamente, mediante Postman, importando el archivo que se encuentra en la carpeta "PostMan"
